@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="logic.js"></script> 
+    <title>AI Brotherhood</title>
+</head>
+
+<body id="webpage" onload="SReadTextFile()">
+    <div id="FixedBoxFixer">
+        <div id="Entwickler">Made by Henri</div>
+        <div id="Donation">Donate to: 0xBCd8Fbb84Efc6bF1B7dFfD43E404A54B9AED1cdb</div>
+    </div>
+    <div id="Ueberschrift">
+        <h1 id="Headline">Axie Infinity Brotherhood</h1>
+            <p id="Underline">Land Owner Brotherhood Ranking weighted by type of Land owned</p>
+    </div>
+
+    <button onclick="ReadTextFile()"> Hello </button>
+
+    <div id="lds-hourglass"></div>
+
+    <div id="LandRankingBox">
+        <div class="RankingName" id="TotalRanking"> Total Land Owner Rankings </div>
+        <div class="RankingName" id="GenesisRanking"> Genesis Land Owner Rankings </div>
+        <div class="RankingName" id="MysticRanking"> Mystic Land Owner Rankings </div>
+        <div class="RankingName" id="ArcticRanking"> Arctic Land Owner Rankings </div>
+        <div class="RankingName" id="ForestRanking"> Forest Land Owner Rankings </div>
+        <div class="RankingName" id="SavannahRanking"> Savannah Land Owner Rankings </div>
+        <div class="ListClass" id="TList"></div>
+        <div class="ListClass" id="GList"></div>
+        <div class="ListClass" id="MList"></div>
+        <div class="ListClass" id="AList"></div>
+        <div class="ListClass" id="FList"></div>
+        <div class="ListClass" id="SList"></div>
+    </div>
+</body>
+</html>
