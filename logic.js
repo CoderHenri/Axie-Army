@@ -183,5 +183,66 @@ function ArraySorter(RawArray) {
 
 function PointConverter(Array) {
     var PointArray = [];
-    PointArray.push({LoomOwner})
+    
+    for(i=0; i < Array.length; i++) {
+        var PointsCalculated = 0;
+        PointsCalculated = Array[i].Genesis * 1000 + Array[i].Mystic * 100 + Array[i].Arctic * 45 + Array[i].Forest * 16 + Array[i].Savannah * 5;
+        PointArray.push({LoomOwner : Array[i].LoomOwner, Points : PointsCalculated});
+    }
+    PointArray.sort((a,b) => b.Points - a.Points);
+    console.log(PointArray);
+    ProfileNamer(PointArray);
+}
+
+async function ProfileNamer(Array) {
+  
+    var url = "https://axieinfinity.com/graphql-server/graphql"
+    
+    for(i=0; Array.length > i; i++) {
+        var loomAddy = Array[i].LoomOwner;
+        ethAddy = JSON.stringify(loomAddy);
+        var FetchChecker = "NEIN";
+        FetchChecker = "NEIN";
+        
+        for(x=0; NameArray.length > x; x++) {
+            if(NameArray[x].Loom == Array[i].LoomOwner) {
+            Array[i].LoomOwner = NameArray[x].Besitzer;
+            FetchChecker = "JA";
+            break;
+            }
+        }
+        
+        if(FetchChecker == "NEIN") {
+            await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            
+            body: JSON.stringify({
+                operationName:"GetProfileByLoomAddress",
+                variables:{
+                loomAddress:loomAddy
+                },
+                query:"query GetProfileByLoomAddress($loomAddress: String!) {\n  publicProfileWithLoomAddress(loomAddress: $loomAddress) {\n    ...Profile\n    __typename\n  }\n}\n\nfragment Profile on PublicProfile {\n  accountId\n  name\n  addresses {\n    ...Addresses\n    __typename\n  }\n  __typename\n}\n\nfragment Addresses on NetAddresses {\n  ethereum\n  tomo\n  loom\n  __typename\n}\n"})
+            })
+            
+            .then(function(response) { 
+            return response.json(); 
+            })
+        
+            .then(function(data) {
+            var realName = "";
+            try {
+                realName = data.data.publicProfileWithLoomAddress.name;
+            }
+            catch {
+                realName = "No User Profile";
+            }
+            Array[i].LoomOwner = realName;
+            });
+        }
+    }
+    console.log(Array);
 }
