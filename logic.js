@@ -245,4 +245,100 @@ async function ProfileNamer(Array) {
         }
     }
     console.log(Array);
+  NumberofBrothers(Array);
+}
+
+function NumberofBrothers(Array) {
+  var Counter22 = 0;
+  var Counter21 = 0;
+  var Counter20 = 0;
+  var Counter19 = 0;
+  var Counter18 = 0;
+  var Counter17 = 0;
+  var Counter16 = 0;
+  var Counter15 = 0;
+  var Counter14 = 0;
+  var Counter13 = 0;
+  var Counter12 = 0;
+  var Counter11 = 0;
+  var Counter10 = 0;
+  var Counter9 = 0;
+  var Counter8 = 0;
+  var Counter7 = 0;
+  var Counter6 = 0;
+  var Counter5 = 0;
+  var Counter4 = 0;
+  var Counter3 = 0;
+  var Counter2 = 0;
+  var Counter1 = 0;
+
+  for(i=0; Array.length > i; i++) {
+    if(parseInt(Array[i].Points) > 0 && parseInt(Array[i].Points) < 50 ) {
+      Counter22++;
+    } else if(parseInt(Array[i].Points) < 100) {
+      Counter21++;
+    } else if(parseInt(Array[i].Points) < 150) {
+      Counter20++;
+    } else if(parseInt(Array[i].Points) < 200) {
+      Counter19++;
+    } else if(parseInt(Array[i].Points) < 250) {
+      Counter18++;
+    } else if(parseInt(Array[i].Points) < 400) {
+      Counter17++;
+    } else if(parseInt(Array[i].Points) < 550) {
+      Counter16++;
+    } else if(parseInt(Array[i].Points) < 700) {
+      Counter15++;
+    } else if(parseInt(Array[i].Points) < 850) {
+      Counter14++;
+    } else if(parseInt(Array[i].Points) < 1000) {
+      Counter13++;
+    } else if(parseInt(Array[i].Points) < 1500) {
+      Counter12++;
+    } else if(parseInt(Array[i].Points) < 2000) {
+      Counter11++;
+    } else if(parseInt(Array[i].Points) < 2500) {
+      Counter10++;
+    } else if(parseInt(Array[i].Points) < 4000) {
+      Counter9++;
+    } else if(parseInt(Array[i].Points) < 5500) {
+      Counter8++;
+    } else if(parseInt(Array[i].Points) < 7000) {
+      Counter7++;
+    } else if(parseInt(Array[i].Points) < 8500) {
+      Counter6++;
+    } else if(parseInt(Array[i].Points) < 10000) {
+      Counter5++;
+    } else if(parseInt(Array[i].Points) < 20000) {
+      Counter4++;
+    } else if(parseInt(Array[i].Points) < 40000) {
+      Counter3++;
+    } else if(parseInt(Array[i].Points) < 70000) {
+      Counter2++;
+    } else if(parseInt(Array[i].Points) > 70000) {
+      Counter1++;
+    }
+  }
+  document.getElementById("Brother22").innerHTML = Counter22;
+  document.getElementById("Brother21").innerHTML = Counter21;
+  document.getElementById("Brother20").innerHTML = Counter20;
+  document.getElementById("Brother19").innerHTML = Counter19;
+  document.getElementById("Brother18").innerHTML = Counter18;
+  document.getElementById("Brother17").innerHTML = Counter17;
+  document.getElementById("Brother16").innerHTML = Counter16;
+  document.getElementById("Brother15").innerHTML = Counter15;
+  document.getElementById("Brother14").innerHTML = Counter14;
+  document.getElementById("Brother13").innerHTML = Counter13;
+  document.getElementById("Brother12").innerHTML = Counter12;
+  document.getElementById("Brother11").innerHTML = Counter11;
+  document.getElementById("Brother10").innerHTML = Counter10;
+  document.getElementById("Brother9").innerHTML = Counter9;
+  document.getElementById("Brother8").innerHTML = Counter8;
+  document.getElementById("Brother7").innerHTML = Counter7;
+  document.getElementById("Brother6").innerHTML = Counter6;
+  document.getElementById("Brother5").innerHTML = Counter5;
+  document.getElementById("Brother4").innerHTML = Counter4;
+  document.getElementById("Brother3").innerHTML = Counter3;
+  document.getElementById("Brother2").innerHTML = Counter2;
+  document.getElementById("Brother1").innerHTML = Counter1;
 }
