@@ -1,5 +1,11 @@
 var NameArray = [];
 
+var GenesisMulti = 1000;
+var MysticMulti = 100;
+var ArcticMulti = 45;
+var ForestMulti = 16;
+var SavannahMulti = 5;
+
 var Limit22 = 25;
 var Limit21 = 50;
 var Limit20 = 100;
@@ -47,6 +53,11 @@ var ArrayList2 = [];
 var ArrayList1 = [];
 
 function WriteRankingLimit() {
+
+  document.getElementById("PointExplanation").innerHTML = "One Genesis Plot equals " + GenesisMulti + " Points" + "<br />" 
+    + "One Mystic Plot equals " + MysticMulti + " Points" + "<br />" + "One Arctic Plot equals " + ArcticMulti + " Points" + "<br />"
+    + "One Forest Plot equals " + ForestMulti + " Points" + "<br />" + "One Savannah Plot equals " + SavannahMulti + " Points";
+
   document.getElementById("Points22").innerHTML = "1 - " + (Limit22 - 1);
   document.getElementById("Points21").innerHTML = Limit22 + " - " + (Limit21 - 1);
   document.getElementById("Points20").innerHTML = Limit21 + " - " + (Limit20 - 1);
@@ -258,7 +269,7 @@ function PointConverter(Array) {
     
     for(i=0; i < Array.length; i++) {
         var PointsCalculated = 0;
-        PointsCalculated = Array[i].Genesis * 1000 + Array[i].Mystic * 100 + Array[i].Arctic * 45 + Array[i].Forest * 16 + Array[i].Savannah * 5;
+        PointsCalculated = Array[i].Genesis * GenesisMulti + Array[i].Mystic * MysticMulti + Array[i].Arctic * ArcticMulti + Array[i].Forest * ForestMulti + Array[i].Savannah * SavannahMulti;
         PointArray.push({LoomOwner : Array[i].LoomOwner, Points : PointsCalculated});
     }
     PointArray.sort((a,b) => b.Points - a.Points);
@@ -545,6 +556,10 @@ function DisplayList(m) {
     select.style.zIndex = 100;  
     x++;
   }
+}
+
+function PointExplainer() {
+  alert("Geht");
 }
 
 /*
