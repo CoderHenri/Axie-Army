@@ -273,23 +273,23 @@ function NumberofBrothers(Array) {
   var Counter1 = 0;
 
   for(i=0; Array.length > i; i++) {
-    if(parseInt(Array[i].Points) > 0 && parseInt(Array[i].Points) < 50 ) {
+    if(parseInt(Array[i].Points) > 0 && parseInt(Array[i].Points) < 25 ) {
       Counter22++;
-    } else if(parseInt(Array[i].Points) < 100) {
+    } else if(parseInt(Array[i].Points) < 50) {
       Counter21++;
-    } else if(parseInt(Array[i].Points) < 150) {
+    } else if(parseInt(Array[i].Points) < 100) {
       Counter20++;
-    } else if(parseInt(Array[i].Points) < 200) {
+    } else if(parseInt(Array[i].Points) < 150) {
       Counter19++;
-    } else if(parseInt(Array[i].Points) < 250) {
+    } else if(parseInt(Array[i].Points) < 200) {
       Counter18++;
-    } else if(parseInt(Array[i].Points) < 400) {
+    } else if(parseInt(Array[i].Points) < 350) {
       Counter17++;
-    } else if(parseInt(Array[i].Points) < 550) {
+    } else if(parseInt(Array[i].Points) < 500) {
       Counter16++;
-    } else if(parseInt(Array[i].Points) < 700) {
+    } else if(parseInt(Array[i].Points) < 650) {
       Counter15++;
-    } else if(parseInt(Array[i].Points) < 850) {
+    } else if(parseInt(Array[i].Points) < 800) {
       Counter14++;
     } else if(parseInt(Array[i].Points) < 1000) {
       Counter13++;
