@@ -122,11 +122,25 @@
 }
 
 .Undercategory{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin-top: 0px;
+  height: 120px;
+  width: 500px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  line-height: 120px;
+}
+
+.UndercategoryPoints{
+  height: 120px;
+  width: 250px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  line-height: 120px;
 }
   
 .LL {
