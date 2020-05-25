@@ -390,4 +390,7 @@ function NumberofBrothers(Array) {
   document.getElementById("Brother3").innerHTML = Counter3;
   document.getElementById("Brother2").innerHTML = Counter2;
   document.getElementById("Brother1").innerHTML = Counter1;
+
+  var L = document.getElementById("lds-hourglass");
+  L.style.display = "none";
 }
