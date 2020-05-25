@@ -1,6 +1,55 @@
 var NameArray = [];
 
+var Limit22 = 25;
+var Limit21 = 50;
+var Limit20 = 100;
+var Limit19 = 150;
+var Limit18 = 200;
+var Limit17 = 350;
+var Limit16 = 500;
+var Limit15 = 650;
+var Limit14 = 800;
+var Limit13 = 1000;
+var Limit12 = 1500;
+var Limit11 = 2000;
+var Limit10 = 2500;
+var Limit9 = 4000;
+var Limit8 = 5500;
+var Limit7 = 7000;
+var Limit6 = 8500;
+var Limit5 = 10000;
+var Limit4 = 20000;
+var Limit3 = 40000;
+var Limit2 = 70000;
+var Limit1 = 70000;
+
+function WriteRankingLimit() {
+  document.getElementById("Points22").innerHTML = "1 - " + (Limit22 - 1);
+  document.getElementById("Points21").innerHTML = Limit22 + " - " + (Limit21 - 1);
+  document.getElementById("Points20").innerHTML = Limit21 + " - " + (Limit20 - 1);
+  document.getElementById("Points19").innerHTML = Limit20 + " - " + (Limit19 - 1);
+  document.getElementById("Points18").innerHTML = Limit19 + " - " + (Limit18 - 1);
+  document.getElementById("Points17").innerHTML = Limit18 + " - " + (Limit17 - 1);
+  document.getElementById("Points16").innerHTML = Limit17 + " - " + (Limit16 - 1);
+  document.getElementById("Points15").innerHTML = Limit16 + " - " + (Limit15 - 1);
+  document.getElementById("Points14").innerHTML = Limit15 + " - " + (Limit14 - 1);
+  document.getElementById("Points13").innerHTML = Limit14 + " - " + (Limit13 - 1);
+  document.getElementById("Points12").innerHTML = Limit13 + " - " + (Limit12 - 1);
+  document.getElementById("Points11").innerHTML = Limit12 + " - " + (Limit11 - 1);
+  document.getElementById("Points10").innerHTML = Limit11 + " - " + (Limit10 - 1);
+  document.getElementById("Points9").innerHTML = Limit10 + " - " + (Limit9 - 1);
+  document.getElementById("Points8").innerHTML = Limit9 + " - " + (Limit8 - 1);
+  document.getElementById("Points7").innerHTML = Limit8 + " - " + (Limit7 - 1);
+  document.getElementById("Points6").innerHTML = Limit7 + " - " + (Limit6 - 1);
+  document.getElementById("Points5").innerHTML = Limit6 + " - " + (Limit5 - 1);
+  document.getElementById("Points4").innerHTML = Limit5 + " - " + (Limit4 - 1);
+  document.getElementById("Points3").innerHTML = Limit4 + " - " + (Limit3 - 1);
+  document.getElementById("Points2").innerHTML = Limit3 + " - " + (Limit2 - 1);
+  document.getElementById("Points1").innerHTML = Limit1 + "+ ";
+}
+
 async function ReadTextFile() {
+  WriteRankingLimit();
   NameArray = await AsyncTextReader();
   GetLandData();
 }
@@ -273,49 +322,49 @@ function NumberofBrothers(Array) {
   var Counter1 = 0;
 
   for(i=0; Array.length > i; i++) {
-    if(parseInt(Array[i].Points) > 0 && parseInt(Array[i].Points) < 25 ) {
+    if(parseInt(Array[i].Points) > 0 && parseInt(Array[i].Points) < Limit22 ) {
       Counter22++;
-    } else if(parseInt(Array[i].Points) < 50) {
+    } else if(parseInt(Array[i].Points) < Limit21) {
       Counter21++;
-    } else if(parseInt(Array[i].Points) < 100) {
+    } else if(parseInt(Array[i].Points) < Limit20) {
       Counter20++;
-    } else if(parseInt(Array[i].Points) < 150) {
+    } else if(parseInt(Array[i].Points) < Limit19) {
       Counter19++;
-    } else if(parseInt(Array[i].Points) < 200) {
+    } else if(parseInt(Array[i].Points) < Limit18) {
       Counter18++;
-    } else if(parseInt(Array[i].Points) < 350) {
+    } else if(parseInt(Array[i].Points) < Limit17) {
       Counter17++;
-    } else if(parseInt(Array[i].Points) < 500) {
+    } else if(parseInt(Array[i].Points) < Limit16) {
       Counter16++;
-    } else if(parseInt(Array[i].Points) < 650) {
+    } else if(parseInt(Array[i].Points) < Limit15) {
       Counter15++;
-    } else if(parseInt(Array[i].Points) < 800) {
+    } else if(parseInt(Array[i].Points) < Limit14) {
       Counter14++;
-    } else if(parseInt(Array[i].Points) < 1000) {
+    } else if(parseInt(Array[i].Points) < Limit13) {
       Counter13++;
-    } else if(parseInt(Array[i].Points) < 1500) {
+    } else if(parseInt(Array[i].Points) < Limit12) {
       Counter12++;
-    } else if(parseInt(Array[i].Points) < 2000) {
+    } else if(parseInt(Array[i].Points) < Limit11) {
       Counter11++;
-    } else if(parseInt(Array[i].Points) < 2500) {
+    } else if(parseInt(Array[i].Points) < Limit10) {
       Counter10++;
-    } else if(parseInt(Array[i].Points) < 4000) {
+    } else if(parseInt(Array[i].Points) < Limit9) {
       Counter9++;
-    } else if(parseInt(Array[i].Points) < 5500) {
+    } else if(parseInt(Array[i].Points) < Limit8) {
       Counter8++;
-    } else if(parseInt(Array[i].Points) < 7000) {
+    } else if(parseInt(Array[i].Points) < Limit7) {
       Counter7++;
-    } else if(parseInt(Array[i].Points) < 8500) {
+    } else if(parseInt(Array[i].Points) < Limit6) {
       Counter6++;
-    } else if(parseInt(Array[i].Points) < 10000) {
+    } else if(parseInt(Array[i].Points) < Limit5) {
       Counter5++;
-    } else if(parseInt(Array[i].Points) < 20000) {
+    } else if(parseInt(Array[i].Points) < Limit4) {
       Counter4++;
-    } else if(parseInt(Array[i].Points) < 40000) {
+    } else if(parseInt(Array[i].Points) < Limit3) {
       Counter3++;
-    } else if(parseInt(Array[i].Points) < 70000) {
+    } else if(parseInt(Array[i].Points) < Limit2) {
       Counter2++;
-    } else if(parseInt(Array[i].Points) > 70000) {
+    } else if(parseInt(Array[i].Points) > Limit1) {
       Counter1++;
     }
   }
