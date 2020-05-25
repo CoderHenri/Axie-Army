@@ -533,13 +533,20 @@ function DisplayList(m) {
     options = ArrayList22;
   }
 
+  var i, L = select.options.length - 1;
+   for(i = L; i >= 0; i--) {
+      select.remove(i);
+   }
+
+  var x = 1;
   for(var i = 0; i < options.length; i++) {
     var opt = options[i];
     var el = document.createElement("option");
-    el.textContent = opt.Player + " with " + opt.Points + " Points";
+    el.textContent = x + ") " + opt.Player + " with " + opt.Points + " Points";
     el.value = opt;
     select.appendChild(el);
     select.style.zIndex = 100;  
+    x++;
   }
 }
 
