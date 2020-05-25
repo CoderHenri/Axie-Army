@@ -462,7 +462,7 @@ function NumberofBrothers(Array) {
     } else if(m == 22) {
       Counter = Counter22;
     }
-    FirstOption(Brothertext, Counter);
+    FirstOption(Brothertext, Counter, m);
   }
 
 
@@ -470,14 +470,16 @@ function NumberofBrothers(Array) {
   L.style.display = "none";
 }
 
-function FirstOption(BrotherName, Counter) {
+function FirstOption(BrotherName, Counter, m) {
   var select = document.getElementById(BrotherName); 
     var opt = Counter; 
     var el = document.createElement("option");
     el.textContent = opt;
     el.value = opt;
     select.appendChild(el);
-    select.style.zIndex = 100;  
+    select.style.zIndex = 100;
+
+    DisplayList(m);
 }
 
 function DisplayList(m) {
@@ -532,11 +534,6 @@ function DisplayList(m) {
   } else if(m == 22) {
     options = ArrayList22;
   }
-
-  var i, L = select.options.length - 1;
-   for(i = L; i >= 0; i--) {
-      select.remove(i);
-   }
 
   var x = 1;
   for(var i = 0; i < options.length; i++) {
