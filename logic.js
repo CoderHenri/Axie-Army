@@ -23,6 +23,29 @@ var Limit3 = 40000;
 var Limit2 = 70000;
 var Limit1 = 70000;
 
+var ArrayList22 = [];
+var ArrayList21 = [];
+var ArrayList20 = [];
+var ArrayList19 = [];
+var ArrayList18 = [];
+var ArrayList17 = [];
+var ArrayList16 = [];
+var ArrayList15 = [];
+var ArrayList14 = [];
+var ArrayList13 = [];
+var ArrayList12 = [];
+var ArrayList11 = [];
+var ArrayList10 = [];
+var ArrayList9 = [];
+var ArrayList8 = [];
+var ArrayList7 = [];
+var ArrayList6 = [];
+var ArrayList5 = [];
+var ArrayList4 = [];
+var ArrayList3 = [];
+var ArrayList2 = [];
+var ArrayList1 = [];
+
 function WriteRankingLimit() {
   document.getElementById("Points22").innerHTML = "1 - " + (Limit22 - 1);
   document.getElementById("Points21").innerHTML = Limit22 + " - " + (Limit21 - 1);
@@ -324,73 +347,204 @@ function NumberofBrothers(Array) {
   for(i=0; Array.length > i; i++) {
     if(parseInt(Array[i].Points) > 0 && parseInt(Array[i].Points) < Limit22 ) {
       Counter22++;
+      ArrayList22.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit21) {
       Counter21++;
+      ArrayList21.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit20) {
       Counter20++;
+      ArrayList20.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit19) {
       Counter19++;
+      ArrayList19.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit18) {
       Counter18++;
+      ArrayList18.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit17) {
       Counter17++;
+      ArrayList17.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit16) {
       Counter16++;
+      ArrayList16.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit15) {
       Counter15++;
+      ArrayList15.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit14) {
       Counter14++;
+      ArrayList14.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit13) {
       Counter13++;
+      ArrayList13.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit12) {
       Counter12++;
+      ArrayList12.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit11) {
       Counter11++;
+      ArrayList11.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit10) {
       Counter10++;
+      ArrayList10.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit9) {
       Counter9++;
+      ArrayList9.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit8) {
       Counter8++;
+      ArrayList8.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit7) {
       Counter7++;
+      ArrayList7.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit6) {
       Counter6++;
+      ArrayList6.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit5) {
       Counter5++;
+      ArrayList5.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit4) {
       Counter4++;
+      ArrayList4.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit3) {
       Counter3++;
+      ArrayList3.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) < Limit2) {
       Counter2++;
+      ArrayList2.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     } else if(parseInt(Array[i].Points) > Limit1) {
       Counter1++;
+      ArrayList1.push({Player : Array[i].LoomOwner, Points : Array[i].Points});
     }
   }
-  document.getElementById("Brother22").innerHTML = Counter22;
-  document.getElementById("Brother21").innerHTML = Counter21;
-  document.getElementById("Brother20").innerHTML = Counter20;
-  document.getElementById("Brother19").innerHTML = Counter19;
-  document.getElementById("Brother18").innerHTML = Counter18;
-  document.getElementById("Brother17").innerHTML = Counter17;
-  document.getElementById("Brother16").innerHTML = Counter16;
-  document.getElementById("Brother15").innerHTML = Counter15;
-  document.getElementById("Brother14").innerHTML = Counter14;
-  document.getElementById("Brother13").innerHTML = Counter13;
-  document.getElementById("Brother12").innerHTML = Counter12;
-  document.getElementById("Brother11").innerHTML = Counter11;
-  document.getElementById("Brother10").innerHTML = Counter10;
-  document.getElementById("Brother9").innerHTML = Counter9;
-  document.getElementById("Brother8").innerHTML = Counter8;
-  document.getElementById("Brother7").innerHTML = Counter7;
-  document.getElementById("Brother6").innerHTML = Counter6;
-  document.getElementById("Brother5").innerHTML = Counter5;
-  document.getElementById("Brother4").innerHTML = Counter4;
-  document.getElementById("Brother3").innerHTML = Counter3;
-  document.getElementById("Brother2").innerHTML = Counter2;
-  document.getElementById("Brother1").innerHTML = Counter1;
+
+  for(m = 1; m <= 22; m++) {
+    var Brothertext = "Brother"+m;
+    var Counter = 0;
+    if(m == 1) {
+      Counter = Counter1;
+    } else if(m == 2) {
+      Counter = Counter2;
+    } else if(m == 3) {
+      Counter = Counter3;
+    } else if(m == 4) {
+      Counter = Counter4;
+    } else if(m == 5) {
+      Counter = Counter5;
+    } else if(m == 6) {
+      Counter = Counter6;
+    } else if(m == 7) {
+      Counter = Counter7;
+    } else if(m == 8) {
+      Counter = Counter8;
+    } else if(m == 9) {
+      Counter = Counter9;
+    } else if(m == 10) {
+      Counter = Counter10;
+    } else if(m == 11) {
+      Counter = Counter11;
+    } else if(m == 12) {
+      Counter = Counter12;
+    } else if(m == 13) {
+      Counter = Counter13;
+    } else if(m == 14) {
+      Counter = Counter14;
+    } else if(m == 15) {
+      Counter = Counter15;
+    } else if(m == 16) {
+      Counter = Counter16;
+    } else if(m == 17) {
+      Counter = Counter17;
+    } else if(m == 18) {
+      Counter = Counter18;
+    } else if(m == 19) {
+      Counter = Counter19;
+    } else if(m == 20) {
+      Counter = Counter20;
+    } else if(m == 21) {
+      Counter = Counter21;
+    } else if(m == 22) {
+      Counter = Counter22;
+    }
+    FirstOption(Brothertext, Counter);
+  }
+
 
   var L = document.getElementById("lds-hourglass");
   L.style.display = "none";
 }
+
+function FirstOption(BrotherName, Counter) {
+  var select = document.getElementById(BrotherName); 
+    var opt = Counter; 
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+    select.style.zIndex = 100;  
+}
+
+function DisplayList(m) {
+  var idSelecter = "Brother" + m;
+
+
+  var select = document.getElementById(idSelecter); 
+  var options = []; 
+
+  if(m == 1) {
+    options = ArrayList1;
+  } else if(m == 2) {
+    options = ArrayList2;
+  } else if(m == 3) {
+    options = ArrayList3;
+  } else if(m == 4) {
+    options = ArrayList4;
+  } else if(m == 5) {
+    options = ArrayList5;
+  } else if(m == 6) {
+    options = ArrayList6;
+  } else if(m == 7) {
+    options = ArrayList7;
+  } else if(m == 8) {
+    options = ArrayList8;
+  } else if(m == 9) {
+    options = ArrayList9;
+  } else if(m == 10) {
+    options = ArrayList10;
+  } else if(m == 11) {
+    options = ArrayList11;
+  } else if(m == 12) {
+    options = ArrayList12;
+  } else if(m == 13) {
+    options = ArrayList13;
+  } else if(m == 14) {
+    options = ArrayList14;
+  } else if(m == 15) {
+    options = ArrayList15;
+  } else if(m == 16) {
+    options = ArrayList16;
+  } else if(m == 17) {
+    options = ArrayList17;
+  } else if(m == 18) {
+    options = ArrayList18;
+  } else if(m == 19) {
+    options = ArrayList19;
+  } else if(m == 20) {
+    options = ArrayList20;
+  } else if(m == 21) {
+    options = ArrayList21;
+  } else if(m == 22) {
+    options = ArrayList22;
+  }
+
+  for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt.Player + " with " + opt.Points + " Points";
+    el.value = opt;
+    select.appendChild(el);
+    select.style.zIndex = 100;  
+  }
+}
+
+/*
+document.getElementById("TList").innerHTML = '<ol class="LL">' + amount.map(function (genesis) {
+    return '<li>' + String(genesis["amount"]) + " Plots owned by " + String(genesis["owner"]) + '</li>';
+  }).join('') + '</ol>';
+*/
