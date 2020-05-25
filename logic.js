@@ -1,4 +1,5 @@
 var NameArray = [];
+var FinishedArray = [];
 
 var GenesisMulti = 1000;
 var MysticMulti = 100;
@@ -328,6 +329,7 @@ async function ProfileNamer(Array) {
         }
     }
     console.log(Array);
+    FinishedArray = Array;
   NumberofBrothers(Array);
 }
 
@@ -560,6 +562,70 @@ function DisplayList(m) {
 
 function PointExplainer() {
   alert("Geht");
+}
+
+function SearchName(event) {
+  var InputName = document.getElementById("NameInput").value;
+  var RankingName = "";
+  var FindChecker = 0;
+
+  for(i = 0; i < FinishedArray.length; i++) {
+    if(FinishedArray[i].LoomOwner == InputName) {
+      if(FinishedArray[i].Points >= Limit2) {
+        RankingName = document.getElementById("Rank1").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit3) {
+        RankingName = document.getElementById("Rank2").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit4) {
+        RankingName = document.getElementById("Rank3").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit5) {
+        RankingName = document.getElementById("Rank4").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit6) {
+        RankingName = document.getElementById("Rank5").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit7) {
+        RankingName = document.getElementById("Rank6").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit8) {
+        RankingName = document.getElementById("Rank7").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit9) {
+        RankingName = document.getElementById("Rank8").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit10) {
+        RankingName = document.getElementById("Rank9").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit11) {
+        RankingName = document.getElementById("Rank10").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit12) {
+        RankingName = document.getElementById("Rank11").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit13) {
+        RankingName = document.getElementById("Rank12").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit14) {
+        RankingName = document.getElementById("Rank13").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit15) {
+        RankingName = document.getElementById("Rank14").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit16) {
+        RankingName = document.getElementById("Rank15").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit17) {
+        RankingName = document.getElementById("Rank16").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit18) {
+        RankingName = document.getElementById("Rank17").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit19) {
+        RankingName = document.getElementById("Rank18").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit20) {
+        RankingName = document.getElementById("Rank19").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit21) {
+        RankingName = document.getElementById("Rank20").innerHTML;
+      } else if(FinishedArray[i].Points >= Limit22) {
+        RankingName = document.getElementById("Rank21").innerHTML;
+      } else if(FinishedArray[i].Points < Limit22) {
+        RankingName = document.getElementById("Rank22").innerHTML;
+      }
+      FindChecker = 1;
+      alert(InputName + " has " + FinishedArray[i].Points + " Points and is a" + RankingName);
+      event.preventDefault();
+      break;
+    }
+  }
+  if(FindChecker == 0) {
+    alert("Name was not found, please check that your searched for Name is identical with the Profile Name on Axie Infinity and try again");
+    event.preventDefault();
+  }
 }
 
 /*

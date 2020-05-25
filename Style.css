@@ -190,6 +190,8 @@
   }
 }
 
+/* This is for the hover over Text on Points */
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -217,4 +219,44 @@
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+/* This is for the search field */
+
+form {
+
+  margin-left: auto;
+  margin-right: auto;
+  /* This bit sets up the horizontal layout */
+  display: flex;
+  flex-direction: row;     /* make main axis horizontal (default setting) */
+  justify-content: center; /* center items horizontally, in this case */
+
+  height: 25px;
+  max-width: 500px;
+  
+  /* This bit draws the box around it */
+  border:1px solid grey;
+
+  /* I've used padding so you can see the edges of the elements. */
+  padding:2px;
+}
+
+input {
+  /* Tell the input to use all the available space */
+  flex-grow:2;
+  /* And hide the input's outline, so the form looks like the outline */
+  border:none;
+}
+
+input:focus {
+  /* removing the input focus blue box. Put this on the form if you like. */
+  outline: none;
+}
+
+#SearchButton {
+  /* Just a little styling to make it pretty */
+  border:1px solid #252835;
+  background: #252835;
+  color:white;
 }
